@@ -1,0 +1,631 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+  border: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: rgb(230, 229, 229);
+  font-family: 'Fira Code', sans-serif;
+  font-size: 2.3rem;
+  line-height: 1.5;
+}
+
+a, button, span {
+  color: #fff;
+  font-size: 2.76rem;
+}
+
+.section {
+  min-height: 100vh;
+}
+
+.section-two {
+  height: 87rem;
+}
+
+.main-bg {/* Imagem mais responsiva */
+  background-image: url('/assets/img/background.svg');
+  background-size: cover;
+  background-position: center center;
+  color: #fff;/* Quando este BACKGROUND
+  for adicionado em alguma TAG a cor da letra
+  já ficará BRANCO por padrão */
+}
+
+.white-bg {
+  background-color: #fff;
+  color: #000;
+}
+
+.green-bg {
+  background: linear-gradient(to right, rgb(16, 148, 63, 60%), rgb(16, 148, 63, 25%));
+  color: white;
+}
+
+.orange-bg {
+  background: rgb(197, 126, 22, 100%);
+  color: white;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;/* Para garantir que vai ficar 100% da largura */
+  background: rgba(0, 0, 0, 0.3);
+  height: 10.4rem; 
+  z-index: 1;
+}
+
+/* O que realmente criamos é o CONTAINER FILHO,
+pq o PAI sempre OCUPA 100% da largura */
+.main-content {
+  max-width: 132rem;
+  margin: 0 auto;
+  padding: 0 3rem;
+}
+
+.freela {
+  max-width: 136rem;
+  margin: 0 auto;
+  padding: 0 3rem;
+}
+
+.content-flex,
+.navigation,
+.read-flex,
+.freela-flex,
+.footer-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Navigation */
+.navigation {
+  margin-top: 2.8rem;
+  align-items: center;
+}
+
+.navigation li + li {
+  margin-left: 2.8rem;
+}
+
+.navigation li form button,
+.intro-whatsapp {
+  background-color: green;
+  margin-right: 2.8rem;
+  padding: .8rem 2.4rem;
+  color: #fff;
+  box-shadow: .3rem .4rem .4rem 0 rgb(0, 0, 0, 20%);
+}
+
+/* Menu SPACING */
+.menu-spacing {
+  height: 23.2rem;
+}
+
+/* GRID */
+.intro-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  position: relative;
+  top: -6rem;
+  min-height: 100vh;
+}
+
+.intro-image {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: flex-start;
+}
+
+.intro-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.intro-description {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+}
+
+.intro-description h1,
+.intro-description span {
+  font-size: 6rem;
+}
+
+.intro-description h1:nth-child(2) {
+  color: #000;
+}
+
+/* INTRO */
+.main-content.section {
+  margin-top: 8rem;
+}
+
+.intro-resume {
+  margin: .4rem 0 2rem 0;
+}
+
+.intro-whatsapp {
+  max-width: 21.4rem;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.intro-whatsapp img {
+  margin-right: 1.2rem;
+}
+
+.image-profile {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+
+/* Abaixo a imagem está OTIMIZADA para fazermos o RESPONSIVO */
+.image-profile img {
+  max-width: 100%;
+  height: auto;
+}
+
+.top3-content {
+  height: 100vh;
+}
+
+/* TECNOLOGIES */
+.tecnologies-content {
+  min-height: 100vh;
+  /* display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center; */
+  margin-top: 12rem;
+}
+
+.tecnologies-day {
+  padding-bottom: 9.3rem;
+  font-size: 4.8rem;
+  text-align: center;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(33.5rem, 1fr));
+  gap: 8rem;
+  margin-bottom: 16.6rem;
+}
+
+.grid article {
+  padding: 2.8rem;
+  border-radius: 2.4rem;
+}
+
+.grid article img {
+  padding-bottom: .8rem;
+}
+
+.grid .tecnologies-title {
+  margin-bottom: 2.4rem;
+}
+
+.grid .tecnologies-title p {
+  border-radius: 1rem;
+  font-weight: bold;
+}
+
+.grid .background-html {
+  max-width: 24.4rem;
+  padding: .8rem 1.6rem;
+  background-color: rgb(238, 97, 40, 25%);
+  color: #EE6128;
+}
+
+.grid .background-css {
+  max-width: 27.4rem;
+  padding: .8rem 1.6rem;
+  background-color: rgb(1, 112, 186, 25%);
+  color: #0170BA;
+}
+
+.grid .background-javascript {
+  max-width: 27.4rem;
+  padding: .8rem 1.6rem;
+  background-color: rgb(229, 197, 45, 25%);
+  color: #E5C52D;
+}
+
+.grid .background-nodejs {
+  max-width: 24.4rem;
+  padding: .8rem 1.6rem;
+  background-color: rgb(116, 171, 99, 25%);
+  color: #78B261;
+}
+
+.grid .background-reactjs {
+  max-width: 24.4rem;
+  padding: .8rem 1.6rem;
+  background-color: rgb(97, 218, 251, 25%);
+  color: #55D6FA;
+}
+
+.grid .background-mysql {
+  max-width: 17.4rem;
+  padding: .8rem 1.6rem;
+  background: linear-gradient(to bottom, rgb(0, 97, 138, 100%), rgb(228, 142, 0, 100%));
+  color: #E48E00;
+}
+
+.grid .tecnologies-title p {
+  font-size: 1.6rem;
+}
+
+.grid .tecnologies-description {
+  max-width: 27.9rem;
+  word-break: break-all;
+}
+
+.grid .tecnologies-description p {
+  font-size: 1.6rem;
+  margin-bottom: 1.6rem;
+}
+
+.freela-flex {
+  align-items: center;
+  min-height: 100vh;
+}
+
+.description-freela {
+  width: 68.4rem;
+  text-align: center;
+}
+
+.description-freela h1 {
+  font-size: 4.8rem;
+  font-weight: 400;
+}
+.description-freela .button-style,
+.button-style button {
+  background: linear-gradient(to bottom, rgb(20, 149, 65, 25%), rgb(16, 148, 63, 100%));
+  font-size: 4.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.description-freela .button-style {
+  display: flex;
+  justify-content: space-between;
+  max-width: 45.3rem;
+  align-items: center;
+  margin: 3.2rem auto 0;
+  color: white;
+  padding:.4rem .8rem .4rem 3.2rem;
+  box-shadow: .4rem 3.2rem 4rem 0 rgb(0, 0, 0, 32%);
+  border-radius: 2.4rem; 
+}
+
+.image-tecnologies img {
+  max-width: 100%;
+  height: auto;
+}
+
+.footer {
+  min-height: 62.1rem;
+}
+
+.space {
+  margin-top: 15.4rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+.footer-description {
+  max-width: 55.2rem;
+}
+
+.footer-description h1 {
+  font-size: 4rem;
+}
+
+.footer-description p {
+  font-size: 2.3rem;
+}
+
+.space ul {
+  margin-top: 2.7rem;
+}
+
+.space ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2.4rem;
+}
+
+.space ul li:last-child {
+  margin-bottom: 0;
+}
+
+.space ul li img {
+  margin-right: .8rem;
+}
+
+#menu-resp {
+  display: none;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 1080px) {
+  .intro-description h1,
+  .intro-description span,
+  .tecnologies-day,
+  .description-freela h1 {
+    font-size: 4rem;
+  }
+
+  .intro-content {
+    top: -20rem;
+  }
+
+  .button-style button {
+    font-size: 3.5rem
+  }
+
+  .intro-resume p {
+    font-size: 1.6rem;
+  }
+
+  .menu-logo img {
+    widtH: 200px;
+    height: 140px;
+  }
+
+  .navigation li a,
+  .navigation li form button,
+  .navigation li,
+  .intro-whatsapp a {
+    font-size: 1.76rem;
+  }
+
+  .section-two {
+    height: 65rem;
+  }
+
+  .button-style img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .description-freela .button-style {
+    max-width: 35.3rem;
+  }
+
+  .footer {
+    min-height: 45rem;
+  }
+
+  .space {
+    margin-top: 12rem;
+  }
+
+  .footer-description h1,
+  .footer-redes-sociais h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  .footer-description {
+    max-width: 40.2rem;
+  }
+
+  .footer-description p,
+  .footer-redes-sociais ul li p {
+    font-size: 1.8rem;
+  } 
+
+  .space ul li {
+    margin-bottom: 2rem;
+  }
+
+  .footer-redes-sociais ul li img {
+    width: 45px;
+    height: 45px;
+  }
+
+  .active {
+    display: block;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .active {
+    top: 9rem;
+    bottom: 0;
+    min-height: 100vh;
+    background: white;
+    display: none;
+  }
+
+  .menu-spacing {
+    height: 9.2rem;
+    background: rgba(0,0,0,0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+  }
+
+  .intro-content {
+    grid-template-columns: 1fr;
+    gap: 6rem;
+  }
+
+  .content-flex {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navigation {
+    flex-direction: column;
+  }
+
+  .intro-content { 
+    margin-top: 40rem;
+  }
+
+  .section-two {
+    height: 65rem;
+  }
+
+  .image-profile img {
+    max-width: 85%;
+    height: auto;
+  }
+
+  .freela-flex {
+    display: block;
+  }
+
+  .description-freela {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .description-freela h1 {
+    font-size: 3rem;
+  }
+
+  .description-freela .button-style {
+    margin-bottom: 8rem;
+  }
+
+  .button-style button {
+    font-size: 2.5rem;
+  }
+
+  .button-style img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .description-freela .button-style {
+    max-width: 27.3rem;
+  }
+
+  .footer-flex {
+    display: block;
+    margin-top: -12rem;
+  }
+
+  .footer-description {
+    min-width: 100%;
+  } 
+
+  .tecnologies-content {
+    margin-top: 50rem;
+  }
+  .tecnologies-day {
+    padding-bottom: 8.3rem;
+  }
+
+  .footer-description h1 {
+    padding-top: 5rem;
+  }
+
+  .image-tecnologies,
+  .footer-description h1,
+  .footer-redes-sociais h1 {
+    text-align: center;
+  }
+
+  .footer-redes-sociais.space {
+    margin-top: 4rem;
+  }
+
+  .footer-redes-sociais ul li {
+    justify-content: center;
+  }
+
+  .footer-redes-sociais ul li:last-child {
+    padding-bottom: 4rem;
+  }
+
+  .freela {
+    padding-top: 20rem;
+  }
+
+  .navigation li + li,
+  .navigation li:last-child button {
+    margin: 2rem 0;
+  } 
+
+  .navigation li:last-child {
+    margin: 0;
+  }
+
+  .navigation li:first-child {
+    margin: 2rem 0;
+  }
+
+  label::after {
+    content: '🍔';
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background: orange;
+    padding: 1.5rem;
+    z-index: 2;
+  } 
+
+  .navigation li a,
+  .navigation li form button {
+    color: #000;
+    font-size: 3rem;
+  }
+
+  .navigation li form button {
+    color: white;
+  }
+
+  #menu-resp:checked~.menu {
+    display: block;
+    margin-top: -9rem;
+  }
+
+  #menu-resp:checked~.menu-spacing {
+    z-index: 0;
+  }
+
+  #menu-resp:checked~label::after {
+    content: 'X'; 
+    padding: 1.5rem 2rem;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .read-flex p {
+    margin-right: 12rem;  
+  }
+}
